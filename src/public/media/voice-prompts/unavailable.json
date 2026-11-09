@@ -1,0 +1,8 @@
+{
+  "text": "小班主这边没接稳，请搭档帮忙选个主意。",
+  "ok": true,
+  "source": "https://api.openai-next.com/v1/audio/speech",
+  "model": "qwen3-tts-flash",
+  "speaker": "Dylan",
+  "duration": 4.08
+}

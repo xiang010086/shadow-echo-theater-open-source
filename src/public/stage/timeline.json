@@ -1,0 +1,225 @@
+{
+  "welcome": {
+    "duration": 10.44,
+    "lines": [
+      {
+        "role": "host",
+        "text": "诸位，开戏啦！我是小班主。今儿这出狐假虎威，得请你拿个主意！",
+        "start": 2.3,
+        "end": 8.22
+      }
+    ]
+  },
+  "opening": {
+    "duration": 31.24,
+    "lines": [
+      {
+        "role": "host",
+        "text": "山林里，老虎堵住了狐狸，正要扑上去。狐狸眼珠一转。",
+        "start": 2.8,
+        "end": 7.76
+      },
+      {
+        "role": "tiger",
+        "text": "小狐狸，往哪儿跑？今天可落在本王手里了！",
+        "start": 8.16,
+        "end": 13.293
+      },
+      {
+        "role": "fox",
+        "text": "大王且慢。天帝派我掌管百兽，您若吃了我，可就违了天命呀。",
+        "start": 13.693,
+        "end": 20.173
+      },
+      {
+        "role": "tiger",
+        "text": "天帝？就凭你这副小身板？",
+        "start": 20.573,
+        "end": 23.112
+      },
+      {
+        "role": "fox",
+        "text": "您若不信，就跟我走一趟。看看这林子里的动物，见了我怕不怕。",
+        "start": 23.512,
+        "end": 29.512
+      }
+    ]
+  },
+  "prediction": {
+    "duration": 20.72,
+    "lines": [
+      {
+        "role": "host",
+        "text": "狐狸尾巴一扬，大摇大摆地走在前。老虎半信半疑，跟在后面。兔子、小鹿一见，转头就跑。",
+        "start": 1.1,
+        "end": 9.82
+      },
+      {
+        "role": "fox",
+        "text": "大王，瞧见没有？我一露面，它们就全吓跑了。",
+        "start": 10.27,
+        "end": 14.43
+      },
+      {
+        "role": "host",
+        "text": "诸位，你猜它们怕的是狐狸，还是老虎？说说你的想法。",
+        "start": 14.88,
+        "end": 19.2
+      }
+    ]
+  },
+  "prediction_reply": {
+    "duration": 5.0,
+    "lines": [
+      {
+        "role": "host",
+        "text": "先记下你的猜想，咱们用证据说话！",
+        "start": 1,
+        "end": 3.88
+      }
+    ]
+  },
+  "question": {
+    "duration": 17.76,
+    "lines": [
+      {
+        "role": "tiger",
+        "text": "慢着。它们逃跑时，都往本王这边瞧！到底怕的是你，还是我？",
+        "start": 1.1,
+        "end": 6.86
+      },
+      {
+        "role": "fox",
+        "text": "大王多心啦，您不都亲眼看见了么？",
+        "start": 7.31,
+        "end": 10.59
+      },
+      {
+        "role": "host",
+        "text": "你来选！让老虎藏好，狐狸过去；还是狐狸留下，老虎过去？",
+        "start": 11.04,
+        "end": 16.24
+      }
+    ]
+  },
+  "method_reply": {
+    "duration": 5.24,
+    "lines": [
+      {
+        "role": "host",
+        "text": "好，就让老虎藏好，看看狐狸的威风！",
+        "start": 1,
+        "end": 4.12
+      }
+    ]
+  },
+  "hide": {
+    "duration": 18.64,
+    "lines": [
+      {
+        "role": "host",
+        "text": "老虎藏到树后。狐狸独自走上前。",
+        "start": 2.5,
+        "end": 5.38
+      },
+      {
+        "role": "fox",
+        "text": "我又来了！你们……怎么不跑？不怕我啦？",
+        "start": 5.88,
+        "end": 10.52
+      },
+      {
+        "role": "tiger",
+        "text": "本王一藏，它们就不怕了。狐狸，你这威风，怎么不灵了？",
+        "start": 11.02,
+        "end": 16.619
+      }
+    ]
+  },
+  "alone": {
+    "duration": 17.64,
+    "lines": [
+      {
+        "role": "tiger",
+        "text": "你留下，本王自己过去！",
+        "start": 1.8,
+        "end": 3.734
+      },
+      {
+        "role": "fox",
+        "text": "大王，大王……咱们一道走，不好么？",
+        "start": 4.184,
+        "end": 8.104
+      },
+      {
+        "role": "host",
+        "text": "老虎一上前，小动物又跑了。",
+        "start": 8.554,
+        "end": 10.954
+      },
+      {
+        "role": "tiger",
+        "text": "本王独自一来，它们照样跑！原来怕的，一直是本王！",
+        "start": 11.404,
+        "end": 15.634
+      }
+    ]
+  },
+  "ending": {
+    "duration": 22.24,
+    "lines": [
+      {
+        "role": "tiger",
+        "text": "狐狸！你借着本王的威风，摆起架子来了！",
+        "start": 1,
+        "end": 5.008
+      },
+      {
+        "role": "fox",
+        "text": "大王英明。我不过……借您一点威风。我就，先走一步。",
+        "start": 5.508,
+        "end": 12.628
+      },
+      {
+        "role": "host",
+        "text": "借别人的威势吓唬人，这就叫狐假虎威。今天，是你帮老虎验出了真相！谢幕！",
+        "start": 13.128,
+        "end": 20.409
+      }
+    ]
+  },
+  "idle": {
+    "duration": 45.0,
+    "lines": [
+      {
+        "role": "host",
+        "text": "走过路过，留步看戏喽！我是小班主。今儿这出狐假虎威，得请您来拿个主意。小狐狸的威风是真是假？您来断一断，咱们就开戏！",
+        "start": 2,
+        "end": 12.8
+      }
+    ]
+  },
+  "method_reply_alone": {
+    "duration": 5.16,
+    "lines": [
+      {
+        "role": "host",
+        "text": "好，狐狸留下，请老虎自己上前！",
+        "start": 1,
+        "end": 4.04
+      }
+    ]
+  },
+  "curtain": {
+    "duration": 10.0,
+    "lines": []
+  },
+  "prediction_wait": {
+    "duration": 8.0,
+    "lines": []
+  },
+  "method_wait": {
+    "duration": 8.0,
+    "lines": []
+  }
+}

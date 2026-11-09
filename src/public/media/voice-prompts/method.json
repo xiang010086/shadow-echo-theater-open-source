@@ -1,0 +1,8 @@
+{
+  "text": "再说一遍您的主意：老虎藏好，还是老虎自己过去？",
+  "ok": true,
+  "source": "https://api.openai-next.com/v1/audio/speech",
+  "model": "qwen3-tts-flash",
+  "speaker": "Dylan",
+  "duration": 4.48
+}

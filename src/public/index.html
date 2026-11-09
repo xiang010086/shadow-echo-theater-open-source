@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>影有回声 · 板端联调</title><link rel="icon" href="data:,">
+  <style>
+    :root{color-scheme:dark}body{margin:0;background:#100e0c;color:#f7e5c8;font:18px system-ui,sans-serif;text-align:center}main{max-width:1100px;margin:20px auto;padding:0 18px}h1{font-size:25px}video{display:block;background:#000;width:100%;max-height:65vh}button{font:inherit;padding:12px 18px;margin:6px;background:#dfb96e;color:#18120b;border:0;border-radius:6px;cursor:pointer}button:disabled{opacity:.4;cursor:default}button:focus-visible{outline:3px solid #fff;outline-offset:3px}#status{min-height:2.5em}#error{color:#ffb4a6;white-space:pre-wrap}.note{font-size:15px;color:#c2b6a7}[hidden]{display:none!important}
+    .show-mode main{max-width:none;margin:0;padding:0}.show-mode h1,.show-mode main>p.note{display:none}.show-mode video{width:100%;height:calc(100vh - 115px);max-height:none;object-fit:contain}.show-mode #status{margin:4px 0;min-height:1.3em;font-size:16px}.show-mode button{padding:8px 16px;font-size:16px}.show-mode #voice-panel{position:absolute;bottom:110px;left:50%;transform:translateX(-50%);width:min(900px,92vw);padding:10px;background:#19120fed;border:1px solid #957246;border-radius:8px}#voice-note,#transcript{margin:5px;font-size:16px}#talk.recording{background:#b64b34;color:#fff}
+  </style>
+  <style>
+    .show-mode{overflow:hidden}
+    .show-mode video{width:100vw;height:100vh;max-height:none;object-fit:contain}
+    .show-mode:not(.operator-mode) main>:not(video){display:none!important}
+    #audience-feedback{position:fixed;bottom:5vh;left:50%;transform:translateX(-50%);z-index:20;max-width:85vw;padding:12px 20px;border:1px solid #dfb96e;border-radius:20px;background:#19120fed;color:#ffe7b6;font-size:20px;box-shadow:0 2px 18px #0008}#audience-feedback button{display:block;margin:10px auto 0;font-size:17px}#audience-message{white-space:pre-line}
+  </style>
+</head>
+<body><main>
+  <h1>影有回声 · 板端播放联调</h1>
+  <p id="mode-note" class="note">当前是色卡与提示音测试素材，不是皮影成片。语音服务按配置启用；雷达尚未接入。</p>
+  <video id="stage" playsinline preload="auto" aria-label="演出测试画面"></video>
+  <p id="status" role="status" aria-live="polite">正在读取本地清单…</p>
+  <div id="error" role="alert" hidden></div>
+  <button id="start" disabled>开始测试</button>
+  <button id="resume" hidden>点击继续播放</button>
+  <div id="choices" hidden>
+    <button id="hide">1 · 藏好观察</button><button id="alone">2 · 独自验证</button>
+  </div>
+  <div id="voice-panel" hidden><button id="talk" type="button">按住说话 · 空格</button><p id="voice-note" role="status" aria-live="polite"></p><p id="transcript"></p></div>
+  <button id="reset">0 · 重新开始</button>
+  <p class="note">回车开始；1/2选择后续；0复位；空闲时G模拟欢迎。感应事件不会打断正在播放的内容。</p>
+</main><aside id="audience-feedback" hidden role="status" aria-live="polite"><span id="audience-message"></span><div style="display:flex;gap:12px;justify-content:center"><button id="mouse-first" type="button">狐狸</button><button id="mouse-second" type="button">老虎</button></div><button id="retry-listen" type="button" hidden>点击再说一次</button></aside><script type="module" src="app.mjs"></script></body>
+</html>

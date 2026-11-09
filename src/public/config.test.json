@@ -1,0 +1,11 @@
+{
+  "testMedia": true,
+  "clips": {
+    "welcome": "media/welcome.mp4",
+    "opening": "media/opening.mp4",
+    "question": "media/question.mp4",
+    "hide": "media/hide.mp4",
+    "alone": "media/alone.mp4",
+    "ending": "media/ending.mp4"
+  }
+}

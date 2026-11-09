@@ -1,0 +1,15 @@
+.private/
+.run/
+.env
+.env.*
+*.key
+*.pem
+*.log
+__pycache__/
+*.pyc
+.venv/
+.pc-venv/
+.openvoice-venv/
+node_modules/
+src/models/
+src/public/media/runtime-voice/

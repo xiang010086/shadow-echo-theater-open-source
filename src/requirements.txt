@@ -1,0 +1,4 @@
+requests>=2.31
+vosk>=0.3.45
+# Windows microphone capture only:
+sounddevice>=0.4.6; sys_platform == "win32"

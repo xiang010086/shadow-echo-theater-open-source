@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-10",
+  "files": 181,
+  "secret_findings": [],
+  "private_history_included": false,
+  "raw_recordings_included": false,
+  "false_positive_note": "Vosk model filename excluded by word boundary; no key values printed"
+}

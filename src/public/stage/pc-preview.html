@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>影有回声 · 全屏无字幕试听</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><style>html,body{margin:0;width:100%;height:100%;background:#2e211b;overflow:hidden}svg{display:block;width:100vw;height:100vh}</style></head>
+<body><script type="module">
+import {setTimeline,renderAt} from './renderer.mjs';
+import {setSpriteURI} from './sprites.mjs';
+const query=new URLSearchParams(location.search);
+const selected=query.get('voice');
+const variant=['a','b','c'].includes(selected)?selected:'c';
+const clip=query.get('scene')==='opening'?'opening':'welcome';
+const texture=URL.createObjectURL(await (await fetch('characters-v1.png')).blob());
+await new Promise((resolve,reject)=>{const image=new Image();image.onload=resolve;image.onerror=reject;image.src=texture;});
+setSpriteURI(texture);
+const timeline=await (await fetch('timeline.json')).json();
+setTimeline(timeline);
+const metadata=await (await fetch('../media/voices-v2/previews.json')).json();
+const audio=new Audio(`../media/voices-v2/host-${variant}-preview.wav`);
+let frame=0,last=-1;
+const draw=time=>{
+  document.querySelector('svg')?.remove();
+  document.body.insertAdjacentHTML('afterbegin',renderAt(clip,time));
+};
+draw(2);
+function animate(){
+  const time=audio.currentTime+.4;
+  if(Math.floor(time*25)!==last){last=Math.floor(time*25);draw(time);}
+  if(!audio.paused)frame=requestAnimationFrame(animate);
+}
+async function play(){
+  if(clip!=='welcome')return;
+  cancelAnimationFrame(frame);
+  audio.currentTime=0;
+  await audio.play();
+  last=-1;animate();
+}
+audio.addEventListener('loadedmetadata',()=>{
+  timeline.welcome.duration=audio.duration+1;
+  timeline.welcome.lines[0].start=metadata[variant].start;
+  timeline.welcome.lines[0].end=metadata[variant].end;
+});
+audio.addEventListener('ended',()=>draw(audio.duration+.5));
+document.addEventListener('keydown',event=>{
+  if(event.key==='Enter'){event.preventDefault();void play().catch(error=>console.error('试听播放失败',error.name));}
+  if(event.key==='f'||event.key==='F'){event.preventDefault();void document.documentElement.requestFullscreen();}
+});
+document.addEventListener('click',()=>void play().catch(error=>console.error('试听播放失败',error.name)));
+window.productionReady=true;
+window.renderAt=(_clip,time)=>draw(time);
+if(query.get('autoplay')==='1')void play().catch(()=>console.info('按回车开始试听'));
+</script></body></html>

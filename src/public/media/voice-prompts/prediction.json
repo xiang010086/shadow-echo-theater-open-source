@@ -1,0 +1,8 @@
+{
+  "text": "没听清，您再说一遍：怕狐狸，还是怕老虎？",
+  "ok": true,
+  "source": "https://api.openai-next.com/v1/audio/speech",
+  "model": "qwen3-tts-flash",
+  "speaker": "Dylan",
+  "duration": 4.08
+}
